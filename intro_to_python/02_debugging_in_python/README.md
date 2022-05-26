@@ -1,0 +1,67 @@
+# Python Debugger - pdb
+
+## Getting Started
+
+[Python Debugger Docs](https://docs.python.org/3/library/pdb.html)
+
+```python
+import pdb
+
+def some_function():
+    pdb.set_trace()
+```
+
+```python
+def some_function():
+    import pdb; pdb.set_trace()
+```
+
+```python
+# Python 3.7 and beyond
+def some_function():
+    breakpoint()
+```
+
+## Navigating pdb
+
+- You can use `q(uit)`, `exit` to quit the pdb session
+- Use `c(ontinue)` to continue rest of program (or to hit the next breakpoint)
+- Use `s(tep)` to execute the next line of code.
+- Use `n(ext)` to execute the next line in the current function (more limited/specific than `step`)
+- Use `r(eturn)` to execute the rest of the current function until the return value
+- Use `unt(il) [line number]` if you are in an iteration and want to stop hitting the same breakpoint as you iterate but continue running the program. Also can give an optional line number argument and program with run until that line.
+- To print inside debugger, you can use `p 'hello'`
+- To hard exit the program use `Ctrl+Z`, but this will leave the process running. Run `ps` to check which python processes are running so you can close them.
+- [more fun ways to use pdb](https://www.codementor.io/@stevek/advanced-python-debugging-with-pdb-g56gvmpfa)
+
+```python
+def my_function():
+    print('hi')
+    breakpoint()
+    print('bye')
+
+my_function
+```
+
+```bash
+$ python ./intro_to_python/02_debugging_in_python/using_debugger.py
+hi
+> /Users/laura/Flatiron/pd/pd-python-training/intro_to_python/02_debugging_in_python/using_debugger.py(4)my_function()
+-> print("bye")
+(Pdb) q
+
+
+
+$ python ./intro_to_python/02_debugging_in_python/using_debugger.py
+hi
+> /Users/laura/Flatiron/pd/pd-python-training/intro_to_python/02_debugging_in_python/using_debugger.py(4)my_function()
+-> print("bye")
+(Pdb) p 'hi'
+'hi'
+(Pdb) c
+bye
+```
+
+## Practice!
+
+I have a test suite generated with some simple tests - you will likely need to google around a bit in order to solve them. Practice using `pdb` as you work through the tests. Code in `using_debugger.py` and run the test suite with `python3 ./intro_to_python/02_debugging_in_python/test.py` or the relative file path to the test suite.
