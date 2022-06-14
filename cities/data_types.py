@@ -4,22 +4,38 @@ item_3 = 3.14159
 item_4 = (7 == 4)
 item_5 = (4 >= 7)
 
-print(type(item_1))
+# print(type(item_1))
 
 top_travel_cities = ['Solta', 'Greenville', 'Buenos Aires', 'Los Cabos', 'Walla Walla Valley', 'Marakesh', 'Albuquerque', 'Archipelago Sea', 'Iguazu Falls', 'Salina Island', 'Toronto', 'Pyeongchang']
 top_canadian_city = top_travel_cities[-2]
 top_two = top_travel_cities[0:2]
-print(top_travel_cities[1])
-print(top_travel_cities[-1])
-print(top_canadian_city)
-print(top_travel_cities[4:6])
-print(top_two)
-print(top_travel_cities[:3])
-print(top_travel_cities[-4:-2])
-print(top_travel_cities[-3:])
+# print(top_travel_cities[1])
+# print(top_travel_cities[-1])
+# print(top_canadian_city)
+# print(top_travel_cities[4:6])
+# print(top_two)
+# print(top_travel_cities[:3])
+# print(top_travel_cities[-4:-2])
+# print(top_travel_cities[-3:])
 
 continent_travel_cities = ['Buenos Aires, Argentina', 'Iguazu Falls, Argentina', 'Los Cabos, Mexico', 'Walla Walla Valley, Washington', 'Albuquerque, New Mexico', 'Greenville, South Carolina', 'Toronto, Canada', 'Archipelago Sea', 'Salina Island, Sicily', 'Solta, Croatia', 'Marakesh, Morocco', 'Pyeongchang, South Korea']
 south_america = continent_travel_cities[0:3]
 north_america = continent_travel_cities[3:7]
-print(south_america)
-print(north_america)
+not_a_city = continent_travel_cities[7]
+europe = continent_travel_cities[8:10]
+asia = continent_travel_cities[-2:]
+# print(south_america)
+# print(north_america)
+# print(not_a_city)
+# print(europe)
+# print(asia)
+
+continent_travel_cities.append('Wuhan, China')
+# print(continent_travel_cities)
+print(len(continent_travel_cities))
+continent_travel_cities.pop()
+# print(continent_travel_cities)
+print(len(continent_travel_cities))
+continent_travel_cities.pop(continent_travel_cities.index('Archipelago Sea'))
+# print(continent_travel_cities)
+print(len(continent_travel_cities))
