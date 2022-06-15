@@ -39,3 +39,36 @@ print(len(continent_travel_cities))
 continent_travel_cities.pop(continent_travel_cities.index('Archipelago Sea'))
 # print(continent_travel_cities)
 print(len(continent_travel_cities))
+
+repeat_cities = ['Buenos Aires, Argentina', 'Iguazu Falls,Argentina', 'Los Cabos, Mexico', 'Walla Walla Valley, Washington', 'Albuquerque, New Mexico', 'Greenville, South Carolina', 'Toronto, Canada', 'Archipelago Sea', 'Salina Island, Sicily', 'Solta, Croatia', 'Marakesh, Morocco', 'Pyeongchang, South Korea', 'Wuhan, China', 'Wuhan, China', 'Toronto, Canada', 'Albuquerque, New Mexico', 'Salina Island, Sicily']
+repeat_to_unique_cities_set = set(repeat_cities)
+print(repeat_to_unique_cities_set)
+print(len(repeat_cities))
+print(len(repeat_to_unique_cities_set))
+
+back_to_list_cities = list(repeat_to_unique_cities_set)
+print(back_to_list_cities)
+print(len(back_to_list_cities))
+
+practice_cities = ['Buenos Aires, Argentina',
+                     'Iguazu Falls,Argentina',
+                     'Los Cabos, Mexico',
+                     'Walla Walla Valley, Washington',
+                     'Albuquerque, New Mexico',
+                     'Greenville, South Carolina',
+                     'Toronto, Canada',
+                     'Archipelago Sea',
+                     'Salina Island, Sicily',
+                     'Solta, Croatia',
+                     'Marakesh, Morocco',
+                     'Pyeongchang, South Korea',
+                     'Wuhan, China',
+                     'Wuhan, China',
+                     'Toronto, Canada',
+                     'Albuquerque, New Mexico',
+                     'Salina Island, Sicily'
+                     ]
+practice_cities_length = len(practice_cities)
+practice_cities_set = set(practice_cities)
+print(practice_cities_length)
+print(len(practice_cities_set))
